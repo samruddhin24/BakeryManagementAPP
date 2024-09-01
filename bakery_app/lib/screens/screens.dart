@@ -7,7 +7,7 @@ export 'favourites/favourites_controller.dart';
 export 'home/home_screen.dart';
 export 'home/home_controller.dart';
 export 'intro/intro.dart';
-export 'intro/introcontroller.dart';
+export 'intro/intro_controller.dart';
 export 'login/login_screen.dart';
 export 'login/login_controller.dart';
 export 'order_status/order_status_screen.dart';

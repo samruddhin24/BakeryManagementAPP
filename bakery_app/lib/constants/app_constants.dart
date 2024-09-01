@@ -1,14 +1,14 @@
 class AppConstants{
-  static String title = 'My Bakery';
+  static String title = 'My\nBakery';
   // Intro Page 1
   static String introPage1Heading = 'Welcome to my Bakery';
-  static String introPage1SubHeading = 'Where every treat is a handcrafted delight.\nSavor the freshness of our daily baked goods\nmade with love and the finest ingredients';
+  static String introPage1SubHeading = 'Where every treat is a handcrafted delight.Savor the freshness of our daily baked goods made with love and the finest ingredients';
   // Intro Page 2
   static String introPage2Heading = 'Delicious freshly baked';
-  static String introPage2SubHeading = 'Delicious freshly baked goods, crafted to perfection\nwith each bite. Experience the warmth and flavor of\nour bakery\'s finest, straight from the oven to you';
+  static String introPage2SubHeading = 'Delicious freshly baked goods, crafted to perfection with each bite. Experience the warmth and flavor of our bakery\'s finest, straight from the oven to you';
   // Intro Page 3
   static String introPage3Heading = 'Fresh from the oven';
-  static String introPage3SubHeading = 'Fresh from the oven, our treats bring warmth and\ncomfort with every bite. Indulge in the rich,\nhomemade flavors that make each moment\nsweeter';
+  static String introPage3SubHeading = 'Fresh from the oven, our treats bring warmth and comfort with every bite. Indulge in the rich, homemade flavors that make each moment sweeter';
   // Buttons
   static String btnNext = 'Next';
   static String btnLogin = 'Login';

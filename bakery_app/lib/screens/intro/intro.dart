@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../constants/app_colors.dart';
+import '../../constants/route_constants.dart';
 import '../../widgets/custom_button.dart';
 
 class IntroScreen extends StatelessWidget {
@@ -26,8 +27,7 @@ class IntroScreen extends StatelessWidget {
                     alignment: Alignment.topRight,
                     child: TextButton(
                       onPressed: () {
-                        controller.currentPage.value =
-                            2; // Skip to the last page
+                        controller.skipToLastPage();
                       },
                       child: const Text('Skip'),
                     ),
@@ -39,8 +39,10 @@ class IntroScreen extends StatelessWidget {
                       return FadeTransition(opacity: animation, child: child);
                     },
                     child: ClipOval(
-                      key: ValueKey<String>(controller
-                          .introModels[controller.currentPage.value].image),
+                      key: ValueKey<String>(
+                        controller
+                            .introModels[controller.currentPage.value].image,
+                      ),
                       child: Image.asset(
                         controller
                             .introModels[controller.currentPage.value].image,

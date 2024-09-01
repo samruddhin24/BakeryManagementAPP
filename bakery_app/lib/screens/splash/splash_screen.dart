@@ -1,4 +1,5 @@
 import 'package:bakery_app/constants/app_colors.dart';
+import 'package:bakery_app/constants/constants.dart';
 import 'package:bakery_app/constants/controller_tags.dart';
 import 'package:bakery_app/screens/screens.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class SplashScreen extends GetWidget<SplashController> {
     return  Scaffold(
       body: Stack(
         children: [
-          Image.asset('assets/images/Background image.jpg',
+          Image.asset(ImageConstants.bg,
             fit: BoxFit.cover,
             height: double.infinity,
             width: double.infinity,
@@ -27,7 +28,7 @@ class SplashScreen extends GetWidget<SplashController> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset('assets/images/logoIcon 1.png',
+                Image.asset(ImageConstants.logo,
                   height: 150,
                   width: 150,
                 ),

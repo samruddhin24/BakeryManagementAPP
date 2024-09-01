@@ -24,6 +24,7 @@ class IntroController extends GetxController {
     ),
   ];
 
+  //method to increment page count
   void nextPage() {
     if (currentPage.value < introModels.length - 1) {
       currentPage.value++;
@@ -31,5 +32,10 @@ class IntroController extends GetxController {
     } else {
       Get.offNamed(RouteConstants.loginScreen);
     }
+  }
+
+  //method to skip intro page and go directly to login page
+  void skipToLastPage() {
+    Get.offNamed(RouteConstants.loginScreen, arguments: introModels.last);
   }
 }

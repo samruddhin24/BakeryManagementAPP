@@ -1,11 +1,9 @@
 import 'package:bakery_app/constants/app_colors.dart';
 import 'package:bakery_app/constants/constants.dart';
-import 'package:bakery_app/constants/controller_tags.dart';
 import 'package:bakery_app/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../constants/app_constants.dart';
 
 class SplashScreen extends GetWidget<SplashController> {
   const SplashScreen({super.key});

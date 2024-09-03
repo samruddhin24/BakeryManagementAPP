@@ -7,5 +7,6 @@ class ImageConstants{
   static String intro03 = 'assets/images/welcome_3.webp';
   static String bg = 'assets/images/Background image.jpg';
   static String logo = 'assets/images/logoIcon 1.png';
+  static String login = 'assets/images/login.png';
 
 }

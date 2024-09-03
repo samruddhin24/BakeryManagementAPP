@@ -10,7 +10,7 @@ class AppRoutes{
     GetPage(name: RouteConstants.favouritesScreen, page: ()=> const FavouritesScreen()),
     GetPage(name: RouteConstants.homeScreen, page: ()=> const HomeScreen()),
     GetPage(name: RouteConstants.introScreen, page: ()=> const IntroScreen()),
-    GetPage(name: RouteConstants.loginScreen, page: ()=> const LoginScreen()),
+    GetPage(name: RouteConstants.loginScreen, page: ()=>  LoginScreen()),
     GetPage(name: RouteConstants.orderStatusScreen, page: ()=> const OrderStatusScreen()),
     GetPage(name: RouteConstants.otpScreen, page: ()=> const OtpScreen()),
     GetPage(name: RouteConstants.descriptionScreen, page: ()=> const DescriptionScreen()),

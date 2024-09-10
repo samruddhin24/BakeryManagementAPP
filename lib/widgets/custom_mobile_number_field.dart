@@ -36,19 +36,20 @@ class _CustomMobileNumberFieldState extends State<CustomMobileNumberField> {
           children: [
             const Positioned(
               left: 10,
-                top: 15,
+                top: 16,
                 child: Text(
                   '+91',
                   style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
                 ),
             ),
             TextFormField(
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.start,
               keyboardType: TextInputType.phone,
               maxLength: 10,
               style: const TextStyle(
                 fontSize: 16,   
-                letterSpacing: 2
+                letterSpacing: 2,
+                fontWeight: FontWeight.bold,
               ),
               decoration: const InputDecoration(
                 counterText: '',

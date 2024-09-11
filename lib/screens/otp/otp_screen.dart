@@ -1,3 +1,4 @@
+import 'package:bakery_app/constants/controller_tags.dart';
 import 'package:bakery_app/screens/screens.dart';
 import 'package:bakery_app/widgets/custom_button.dart';
 import 'package:bakery_app/widgets/custom_otp_field.dart';
@@ -9,11 +10,12 @@ import '../../constants/route_constants.dart';
 import 'otp_controller.dart';
 
 class OtpScreen extends StatelessWidget {
-  final OtpController otpController = Get.put(OtpController());
   String enteredOtp = '';
 
   @override
   Widget build(BuildContext context) {
+    OtpController otpController = Get.find<OtpController>(tag: ControllerTags.otpController);
+    otpController.onReady();
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
@@ -53,7 +55,7 @@ class OtpScreen extends StatelessWidget {
               CustomButton(text: AppConstants.verifyBtn,
                   onPressed: () {
                     if(enteredOtp.length == 6){
-                      Get.toNamed(RouteConstants.homeScreen);
+                      otpController.verifyOtp(enteredOtp);
                     }else{
                       Get.snackbar(
                         "Invalid OTP",

@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:get/get.dart';
 
+import '../../constants/route_constants.dart';
+
 class OtpController extends GetxController{
 
   RxInt secondsRemaining = 60.obs;
@@ -29,6 +31,12 @@ class OtpController extends GetxController{
     if (secondsRemaining.value == 0) {
       startTimer();
       //otp resend logic will come here later
+    }
+  }
+
+  void verifyOtp(String otp) {
+    if(otp.length == 6){
+      Get.toNamed(RouteConstants.homeScreen);
     }
   }
 

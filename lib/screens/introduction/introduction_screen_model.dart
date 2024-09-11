@@ -1,9 +1,9 @@
-class IntroModel{
+class IntroductionModel{
   final String description;
   final String subDescription;
   final String image;
 
-  IntroModel({
+  IntroductionModel({
     required this.description,
     required this.subDescription,
     required this.image,

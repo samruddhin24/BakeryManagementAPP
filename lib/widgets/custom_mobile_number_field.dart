@@ -1,4 +1,5 @@
 import 'package:bakery_app/constants/app_constants.dart';
+import 'package:bakery_app/constants/constants.dart';
 import 'package:bakery_app/screens/login/login_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -34,12 +35,16 @@ class _CustomMobileNumberFieldState extends State<CustomMobileNumberField> {
         ),
         child: Stack(
           children: [
-            const Positioned(
+             Positioned(
               left: 10,
-                top: 16,
-                child: Text(
-                  '+91',
-                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                top: 0,
+                bottom: 0,
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    AppConstants.loginCode,
+                    style: const TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                  ),
                 ),
             ),
             TextFormField(
@@ -51,9 +56,9 @@ class _CustomMobileNumberFieldState extends State<CustomMobileNumberField> {
                 letterSpacing: 2,
                 fontWeight: FontWeight.bold,
               ),
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 counterText: '',
-                hintText: 'Enter Mobile Number',
+                hintText: AppConstants.loginFieldHint,
                 hintStyle: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.normal,

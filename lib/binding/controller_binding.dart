@@ -18,7 +18,7 @@ class ControllerBinding implements Bindings{
     Get.lazyPut<HomeController>(()=> HomeController(),
     tag: ControllerTags.homeController, fenix: true);
 
-    Get.lazyPut<IntroController>(()=> IntroController(),
+    Get.lazyPut<IntroductionScreenController>(()=> IntroductionScreenController(),
     tag: ControllerTags.introController, fenix: true);
 
     Get.lazyPut<LoginController>(()=> LoginController(),

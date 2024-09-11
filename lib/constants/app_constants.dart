@@ -18,6 +18,7 @@ class AppConstants{
 
   // Login Page
   static String loginHeading = 'Login';
+  static String loginCode = '+91';
   static String loginSubHeading = 'Welcome to My Bakery please login your\naccount using mobile number';
   static String loginFieldHint = 'Enter mobile number';
   // OTP Page

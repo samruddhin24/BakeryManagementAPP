@@ -33,11 +33,11 @@ void fetchProducts(){
   ];
 
   recommended = [
-    ProductModel(imagePath: ImageConstants.recommended1, name: AppConstants.kajuHoneyStick, price: ' ₹200.00', rating: '5.0', reviews: '25'),
-    ProductModel(imagePath: ImageConstants.recommended2, name: AppConstants.whiteBread, price: ' ₹45.00', rating: '5.0', reviews: '25'),
-    ProductModel(imagePath: ImageConstants.recommended3, name: AppConstants.potatoChips, price: ' ₹40.00', rating: '5.0', reviews: '25'),
+    ProductModel(imagePath: ImageConstants.recommended1, name: AppConstants.bhujia, price: ' ₹200.00', rating: '5.0', reviews: '25'),
+    ProductModel(imagePath: ImageConstants.recommended2, name: AppConstants.kajuHoneyStick, price: ' ₹45.00', rating: '5.0', reviews: '25'),
+    ProductModel(imagePath: ImageConstants.recommended3, name: AppConstants.whiteBread, price: ' ₹40.00', rating: '5.0', reviews: '25'),
     ProductModel(imagePath: ImageConstants.recommended4, name: AppConstants.nachos, price: ' ₹60.00', rating: '5.0', reviews: '25'),
-    ProductModel(imagePath: ImageConstants.recommended5, name: AppConstants.bhujia, price: ' ₹50.00', rating: '5.0', reviews: '25'),
+    ProductModel(imagePath: ImageConstants.recommended5, name: AppConstants.potatoChips, price: ' ₹50.00', rating: '5.0', reviews: '25'),
   ];
 }
 

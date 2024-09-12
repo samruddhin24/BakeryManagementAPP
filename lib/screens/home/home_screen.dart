@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
     final HomeController controller = Get.find<HomeController>(tag: ControllerTags.homeController);
 
     return Scaffold(
-        backgroundColor: AppColors.lightWhite,
+        backgroundColor: AppColors.white,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: SingleChildScrollView(

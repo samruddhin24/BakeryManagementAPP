@@ -8,5 +8,33 @@ class ImageConstants{
   static String bg = 'assets/images/Background image.jpg';
   static String logo = 'assets/images/logoIcon 1.png';
   static String login = 'assets/images/login2.webp';
+  static String bannerImage1 = 'assets/images/banner1.png';
+  static String bannerImage2 = 'assets/images/banner2.jpeg';
+  static String cake = 'assets/images/cake.png';
+  static String chips = 'assets/images/chips.png';
+  static String chocolate = 'assets/images/chocolate.png';
+  static String cookies = 'assets/images/cookies.png';
+  static String donut = 'assets/images/donut.png';
+  static String muffin = 'assets/images/muffin.png';
+  static String pastry = 'assets/images/pastry.png';
+  static String sweets = 'assets/images/sweets.png';
+  static String toast = 'assets/images/toast.png';
+  static String popular1 = 'assets/images/cake1.jpeg';
+  static String popular2 = 'assets/images/cake2.jpeg';
+  static String popular3 = 'assets/images/cake3.jpeg';
+  static String popular4 = 'assets/images/cake4.jpeg';
+  static String popular5 = 'assets/images/cake5.jpeg';
+  static String popular6 = 'assets/images/cake6.jpeg';
+  static String special1 = 'assets/images/rec1.jpeg';
+  static String special2 = 'assets/images/rec2.jpeg';
+  static String special3 = 'assets/images/rec3.jpeg';
+  static String special4 = 'assets/images/rec4.jpeg';
+  static String special5 = 'assets/images/rec5.jpeg';
+  static String special6 = 'assets/images/rec6.jpeg';
+  static String recommended1 = 'assets/images/bhujia.jpg';
+  static String recommended2 = 'assets/images/kaju stick.jpg';
+  static String recommended3 = 'assets/images/White bread.jpg';
+  static String recommended4 = 'assets/images/chips.jpg';
+  static String recommended5 = 'assets/images/Nachos.jpg';
 
 }

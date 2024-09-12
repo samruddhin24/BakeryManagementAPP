@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   get: ^4.6.6
   flutter_svg: ^2.0.10+1
+  velocity_x: ^4.2.1
 
 
 dev_dependencies:

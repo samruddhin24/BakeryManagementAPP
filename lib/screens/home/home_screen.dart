@@ -4,6 +4,7 @@ import 'package:bakery_app/constants/constants.dart';
 import 'package:bakery_app/screens/home/home_controller.dart';
 import 'package:bakery_app/widgets/banner_slider.dart';
 import 'package:bakery_app/widgets/category_slider.dart';
+import 'package:bakery_app/widgets/custom_navbar.dart';
 import 'package:bakery_app/widgets/product_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -67,10 +68,12 @@ class HomeScreen extends StatelessWidget {
               ProductSlider(products: controller.specialCakes, title: 'Our Speciality'),
               const SizedBox(height: 20),
               ProductSlider(products: controller.recommended, title: 'Recommended for you'),
+              const SizedBox(height: 20)
             ],
           ),
         ),
       ),
+      bottomNavigationBar: CustomNavbar(),
     );
   }
 }

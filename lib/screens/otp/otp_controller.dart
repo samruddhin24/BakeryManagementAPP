@@ -36,7 +36,7 @@ class OtpController extends GetxController{
 
   void verifyOtp(String otp) {
     if(otp.length == 6){
-      Get.toNamed(RouteConstants.homeScreen);
+      Get.toNamed(RouteConstants.registerScreen);
     }
   }
 

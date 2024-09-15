@@ -1,17 +1,13 @@
-import 'dart:ui';
-
 import 'package:bakery_app/constants/constants.dart';
 import 'package:bakery_app/screens/home/home_controller.dart';
 import 'package:bakery_app/widgets/banner_slider.dart';
 import 'package:bakery_app/widgets/category_slider.dart';
 import 'package:bakery_app/widgets/custom_navbar.dart';
 import 'package:bakery_app/widgets/product_slider.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../constants/app_colors.dart';
-import '../../constants/app_constants.dart';
-import '../../widgets/searchBar.dart';
+import '../../widgets/search_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

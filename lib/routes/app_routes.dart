@@ -11,7 +11,7 @@ class AppRoutes{
     GetPage(name: RouteConstants.homeScreen, page: ()=> const HomeScreen()),
     GetPage(name: RouteConstants.introScreen, page: ()=> const IntroScreen()),
     GetPage(name: RouteConstants.loginScreen, page: ()=>  LoginScreen()),
-    GetPage(name: RouteConstants.orderStatusScreen, page: ()=> const OrderStatusScreen()),
+    GetPage(name: RouteConstants.orderStatusScreen, page: ()=>  OrderStatusScreen()),
     GetPage(name: RouteConstants.otpScreen, page: ()=> OtpScreen()),
     GetPage(name: RouteConstants.descriptionScreen, page: ()=> const DescriptionScreen()),
     GetPage(name: RouteConstants.productScreen, page: ()=> const ProductScreen()),

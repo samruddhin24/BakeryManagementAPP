@@ -1,6 +1,8 @@
 import 'package:bakery_app/constants/app_colors.dart';
+import 'package:bakery_app/constants/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CustomNavbar extends StatefulWidget {
   @override
@@ -10,9 +12,43 @@ class CustomNavbar extends StatefulWidget {
 class _CustomNavbarState extends State<CustomNavbar> {
   int selectedIndex = 0;
 
+  final List<String> screens = [
+    RouteConstants.homeScreen,
+    RouteConstants.categoriesScreen,
+    RouteConstants.favouritesScreen,
+    RouteConstants.orderStatusScreen,
+  ];
+
   void onItemTapped(int index){
     setState(() {
       selectedIndex = index;
+    });
+    Get.offNamed(screens[index]);
+  }
+
+  void initState(){
+    super.initState();
+    updateSelectedIndex(Get.currentRoute);
+  }
+
+  void updateSelectedIndex(String route){
+    setState(() {
+      switch(route){
+        case RouteConstants.homeScreen:
+          selectedIndex = 0;
+          break;
+        case RouteConstants.categoriesScreen:
+          selectedIndex = 1;
+          break;
+        case RouteConstants.favouritesScreen:
+          selectedIndex = 2;
+          break;
+        case RouteConstants.orderStatusScreen:
+          selectedIndex = 3;
+          break;
+        default:
+          selectedIndex = 0;
+      }
     });
   }
 

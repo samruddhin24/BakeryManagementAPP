@@ -77,7 +77,13 @@ class AppConstants{
   static String placeOrder = 'Place Order';
   static String total = 'Total';
   static String orderPlaced = 'Order Placed';
-  // Profile Page
+  // My Orders
+  static String orderID = 'Order ID: #';
+  static String filter = 'Filter';
+  static String pending = 'Pending';
+  static String cancelled = 'Cancelled';
+  static String delivered = 'Delivered';
+  static String myOrders = 'My Orders';
 
 
 

@@ -20,7 +20,7 @@ class OrderStatusController extends GetxController{
     var allOrders = [
       Order(id: '#25113', date: '05 January 2024', title: AppConstants.buttercreamCupcake, price: '₹40.00', image: ImageConstants.special3, status: OrderStatus.pending),
       Order(id: '#25114', date: '06 January 2024', title: AppConstants.hazelnutCake, price: '₹1200.00', image: ImageConstants.popular1, status: OrderStatus.delivered),
-      Order(id: '#25115', date: '07 January 2024', title: AppConstants.creamDonut, price: '₹65.00', image: ImageConstants.recommended5, status: OrderStatus.cancelled),
+      Order(id: '#25115', date: '07 January 2024', title: AppConstants.creamDonut, price: '₹65.00', image: ImageConstants.special5, status: OrderStatus.cancelled),
     ];
 
     orders.addAll(allOrders);

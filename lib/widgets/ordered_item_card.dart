@@ -1,8 +1,6 @@
-import 'dart:ui';
-
 import 'package:bakery_app/constants/app_colors.dart';
 import 'package:bakery_app/constants/app_constants.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import '../models/ordered_item_model.dart';
 
 class OrderedItemCard extends StatelessWidget {
@@ -38,39 +36,76 @@ class OrderedItemCard extends StatelessWidget {
           ),
           const SizedBox(width: 10),
           Expanded(
-              child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                '${AppConstants.orderID}${order.id} | ${order.date}',
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.black,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '${AppConstants.orderID}${order.id} | ${order.date}',
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.black,
+                  ),
+                  overflow: TextOverflow.ellipsis,
                 ),
-                overflow: TextOverflow.ellipsis,
-              ),
-              const SizedBox(height: 4),
-              Text(
-                order.title,
-                style: const TextStyle(
-                  fontSize: 14,
-                  color: AppColors.darkGrey,
+                const SizedBox(height: 4),
+                Text(
+                  order.title,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    color: AppColors.darkGrey,
+                  ),
                 ),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                order.price,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.normal,
-                  color: AppColors.primary1,
+                const SizedBox(height: 4),
+                Text(
+                  order.price,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.normal,
+                    color: AppColors.primary1,
+                  ),
                 ),
-              ),
-            ],
-          ))
+              ],
+            ),
+          ),
+          const SizedBox(width: 10),
+          Text(
+            orderStatus(order.status),
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              color: orderStatusType(order.status),
+            ),
+          )
         ],
       ),
     );
   }
+
+  String orderStatus(OrderStatus status){
+    switch(status){
+      case OrderStatus.pending:
+        return AppConstants.pending;
+      case OrderStatus.cancelled:
+        return AppConstants.cancelled;
+      case OrderStatus.delivered:
+        return AppConstants.delivered;
+      default:
+        return '';
+    }
+  }
+
+  Color orderStatusType(OrderStatus status){
+    switch(status){
+      case OrderStatus.pending:
+        return AppColors.primary1;
+      case OrderStatus.cancelled:
+        return Colors.red;
+      case OrderStatus.delivered:
+        return Colors.green;
+      default:
+        return AppColors.darkGrey;
+    }
+  }
+
 }

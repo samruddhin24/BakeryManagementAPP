@@ -34,67 +34,33 @@ class OrderStatusScreen extends StatelessWidget {
                     fontSize: 22,
                   ),
                 ),
-                const SizedBox(width: 48),
+                Container(
+                  height: 40,
+                  width: 40,
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      FilterButton.FilterBox(context);
+                    },
+                    backgroundColor: AppColors.primary1,
+                    child: const Icon(Icons.filter_alt_outlined),
+                  ),
+                )
               ],
             ),
           ),
-          Obx(() {
-            String title;
-            switch (controller.selectedFilter.value) {
-              case OrderStatus.cancelled:
-                title = AppConstants.cancelled;
-                break;
-              case OrderStatus.pending:
-                title = AppConstants.pending;
-                break;
-              case OrderStatus.delivered:
-                title = AppConstants.delivered;
-                break;
-              default:
-                title = AppConstants.pending;
-                break;
-            }
-            return Column(
-              children: [
-                Container(
-                  alignment: Alignment.centerLeft,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  child: Text(
-                    title,
-                    style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.primary1,
-                    ),
-                  ),
-                ),
-                const Divider(
-                  thickness: 2,
-                  color: AppColors.grey,
-                ),
-              ],
-            );
-          }),
           Expanded(
             child: Obx(() {
               return ListView.builder(
                 padding: const EdgeInsets.all(8),
                 itemCount: controller.filteredOrders.length,
-                itemBuilder: (context,index){
-                  return OrderedItemCard(order: controller.filteredOrders[index]);
+                itemBuilder: (context, index) {
+                  return OrderedItemCard(
+                      order: controller.filteredOrders[index]);
                 },
               );
             }),
           ),
         ],
-      ),
-      floatingActionButton: FloatingActionButton(
-          onPressed: (){
-        FilterButton.FilterBox(context);
-      },
-      backgroundColor: AppColors.primary1,
-        child: const Icon(Icons.filter_alt_outlined),
       ),
     );
   }

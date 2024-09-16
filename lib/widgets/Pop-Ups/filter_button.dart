@@ -23,14 +23,14 @@ class FilterButton extends StatelessWidget {
     return Obx(() {
       return RadioListTile<OrderStatus>(
         value: status,
-        groupValue: controller.selectedTemporaryFilter.value,
+        groupValue: controller.selectedFilter.value,
         onChanged: (value) {
-          controller.selectedTemporaryFilter(value!);
+          controller.selectedFilter.value = value!;
         },
         title: Text(
           title,
           style: TextStyle(
-            color: status == controller.selectedTemporaryFilter.value
+            color: status == controller.selectedFilter.value
                 ? AppColors.primary1
                 : AppColors.black,
           ),
@@ -44,41 +44,66 @@ class FilterButton extends StatelessWidget {
     OrderStatusController controller = Get.find<OrderStatusController>(
         tag: ControllerTags.orderStatusController);
 
-    Get.dialog(Dialog(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Align(
-              alignment: Alignment.topRight,
-              child: GestureDetector(
-                onTap: () => Get.back(),
-                child: const Icon(Icons.close),
-              ),
-            ),
-            Text(
-              AppConstants.filter,
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 10),
-            FilterButton(status: OrderStatus.pending, title: AppConstants.pending),
-            FilterButton(status: OrderStatus.cancelled, title: AppConstants.cancelled),
-            FilterButton(status: OrderStatus.delivered, title: AppConstants.delivered),
-            const SizedBox(height: 20),
-            CustomButton(text: 'Apply', onPressed: (){
-              controller.applyTemporaryFilter();
-              Get.back();
-            })
-          ],
+
+      showModalBottomSheet(
+        context: context,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(20),
+          ),
         ),
-      ),
-    ));
+        backgroundColor: AppColors.white,
+        isScrollControlled: true,
+        builder: (BuildContext) {
+          return Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Align(
+                  alignment: Alignment.topRight,
+                  child: GestureDetector(
+                    onTap: () => Get.back(),
+                    child: const Icon(Icons.close),
+                  ),
+                ),
+                Text(
+                  AppConstants.filter,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                FilterButton(
+                    status: OrderStatus.pending, title: AppConstants.pending),
+                FilterButton(
+                    status: OrderStatus.cancelled,
+                    title: AppConstants.cancelled),
+                FilterButton(
+                    status: OrderStatus.delivered,
+                    title: AppConstants.delivered),
+                const SizedBox(height: 20),
+                CustomButton(
+                  text: 'Apply',
+                  onPressed: () {
+                    controller.applyFilter();
+                    Get.back();
+                  },
+                ),
+                const SizedBox(height: 10),
+                CustomButton(
+                  text: 'Reset',
+                  onPressed: () {
+                    controller.resetFilter();
+                    Get.back();
+                  },
+                ),
+              ],
+            ),
+          );
+        },
+      );
   }
 }

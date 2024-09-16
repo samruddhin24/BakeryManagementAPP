@@ -8,8 +8,7 @@ class OrderStatusController extends GetxController{
 
   var orders = <Order>[].obs;
   var filteredOrders = <Order>[].obs;
-  var selectedFilter = OrderStatus.pending.obs;
-  var selectedTemporaryFilter = OrderStatus.pending.obs;
+  var selectedFilter = OrderStatus.none.obs;
 
   void onInit(){
     super.onInit();
@@ -24,19 +23,28 @@ class OrderStatusController extends GetxController{
     ];
 
     orders.addAll(allOrders);
-    applyFilter();
+    filteredOrders.value = orders;
   }
 
   void applyFilter(){
-    filteredOrders.value = orders.where((order) => order.status == selectedFilter.value).toList();
+    if(selectedFilter.value == OrderStatus.none){
+      filteredOrders.value = orders;
+    }else {
+      filteredOrders.value =
+          orders.where((order) => order.status == selectedFilter.value)
+              .toList();
+    }
   }
 
-  void setTemporaryFilter(OrderStatus status) {
-    selectedTemporaryFilter.value = status;
+
+  void setFilter(OrderStatus status) {
+    selectedFilter.value = status;
+    applyFilter();
   }
 
-  void applyTemporaryFilter(){
-    selectedFilter.value = selectedTemporaryFilter.value;
+
+  void resetFilter(){
+    selectedFilter.value = OrderStatus.none;
     applyFilter();
   }
 

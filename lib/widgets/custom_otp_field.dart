@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomOtpField extends StatefulWidget {
   final int length;
@@ -37,7 +38,7 @@ class _CustomOtpFieldState extends State<CustomOtpField> {
   void onOtpChanged() {
     String otp = getOtp();
     if (otp.length == widget.length) {
-      widget.onOtpEntered(otp); // Send the OTP to the parent widget
+      widget.onOtpEntered(otp);
     }
   }
 
@@ -61,6 +62,7 @@ class _CustomOtpFieldState extends State<CustomOtpField> {
             child: TextField(
               controller: controllers[index],
               keyboardType: TextInputType.number,
+              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
               textAlign: TextAlign.center,
               maxLength: 1,
               style: const TextStyle(fontSize: 24),

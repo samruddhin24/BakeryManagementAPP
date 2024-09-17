@@ -16,6 +16,7 @@ class OrderStatusScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
+          SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
             child: Row(
@@ -23,7 +24,7 @@ class OrderStatusScreen extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: () {
-                    Get.toNamed(RouteConstants.homeScreen);
+                    Get.back();
                   },
                   icon: const Icon(Icons.arrow_back),
                 ),

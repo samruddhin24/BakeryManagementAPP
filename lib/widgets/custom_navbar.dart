@@ -16,7 +16,7 @@ class _CustomNavbarState extends State<CustomNavbar> {
     RouteConstants.homeScreen,
     RouteConstants.categoriesScreen,
     RouteConstants.favouritesScreen,
-    RouteConstants.orderStatusScreen,
+    RouteConstants.profileScreen,
   ];
 
   void onItemTapped(int index){
@@ -43,7 +43,7 @@ class _CustomNavbarState extends State<CustomNavbar> {
         case RouteConstants.favouritesScreen:
           selectedIndex = 2;
           break;
-        case RouteConstants.orderStatusScreen:
+        case RouteConstants.profileScreen:
           selectedIndex = 3;
           break;
         default:

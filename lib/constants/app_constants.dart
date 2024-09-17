@@ -84,6 +84,14 @@ class AppConstants{
   static String cancelled = 'Cancelled';
   static String delivered = 'Delivered';
   static String myOrders = 'My Orders';
+  //Profile
+  static String myProfile = 'Profile';
+  static String editProfile = 'Edit profile';
+  static String termsAndConditions = 'Terms and Conditions';
+  static String privacyPolicy = 'Privacy policy';
+  static String helpAndSupport = 'Help and support';
+  static String logout = 'Logout';
+  static String deleteAccount = 'Delete Account';
 
 
 

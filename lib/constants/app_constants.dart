@@ -92,7 +92,16 @@ class AppConstants{
   static String helpAndSupport = 'Help and support';
   static String logout = 'Logout';
   static String deleteAccount = 'Delete Account';
-
+  //Order Information
+  static String priceSummary = 'Price Summary';
+  static String customerDetails = 'Customer Details';
+  static String itemTotal = 'Item Total';
+  static String gstCharge = 'GST and Cafe charges';
+  static String paymentMode = 'Paid via';
+  static String grandTotal = 'Grand Total';
+  static String name = 'Name';
+  static String phoneNumber = 'Phone Number';
+  static String address = 'Address';
 
 
 

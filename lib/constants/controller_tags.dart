@@ -12,4 +12,5 @@ class ControllerTags{
   static const profileController = 'profileController';
   static const registrationController = 'registrationController';
   static const splashController = 'splashController';
+  static const orderInformationController = 'orderInformationController';
 }

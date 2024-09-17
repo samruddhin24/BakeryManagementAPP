@@ -11,6 +11,7 @@ class RouteConstants{
   static const categoriesScreen = '/categoriesScreen';
   static const cartScreen = '/cartScreen';
   static const orderStatusScreen = '/orderStatusScreen';
+  static const orderInformationScreen = '/orderInformationScreen';
   static const profileScreen = '/profileScreen';
   static const editProfileScreen = '/editProfileScreen';
   static const favouritesScreen = '/favouritesScreen';

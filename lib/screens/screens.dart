@@ -24,3 +24,5 @@ export 'registration/registration_screen.dart';
 export 'registration/registration_controller.dart';
 export 'splash/splash_screen.dart';
 export 'splash/splash_controller.dart';
+export 'order_information/order_information_screen.dart';
+export 'order_information/order_information_controller.dart';

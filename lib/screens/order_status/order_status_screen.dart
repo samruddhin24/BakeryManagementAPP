@@ -55,8 +55,13 @@ class OrderStatusScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(8),
                 itemCount: controller.filteredOrders.length,
                 itemBuilder: (context, index) {
-                  return OrderedItemCard(
-                      order: controller.filteredOrders[index]);
+                  return InkWell(
+                    onTap: (){
+                      Get.toNamed(RouteConstants.orderInformationScreen);
+                    },
+                    child: OrderedItemCard(
+                        order: controller.filteredOrders[index]),
+                  );
                 },
               );
             }),

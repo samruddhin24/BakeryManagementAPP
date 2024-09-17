@@ -27,6 +27,9 @@ class ControllerBinding implements Bindings{
     Get.lazyPut<OrderStatusController>(()=> OrderStatusController(),
     tag: ControllerTags.orderStatusController, fenix: true);
 
+    Get.lazyPut<OrderInformationController>(()=> OrderInformationController(),
+    tag: ControllerTags.orderInformationController, fenix: true);
+
     Get.lazyPut<OtpController>(()=> OtpController(),
     tag: ControllerTags.otpController, fenix: true);
 

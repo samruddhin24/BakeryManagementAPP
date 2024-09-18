@@ -91,6 +91,7 @@ class AppConstants{
   static String privacyPolicy = 'Privacy policy';
   static String helpAndSupport = 'Help and support';
   static String logout = 'Logout';
+  static String update = 'Update';
   static String deleteAccount = 'Delete Account';
   //Order Information
   static String priceSummary = 'Price Summary';

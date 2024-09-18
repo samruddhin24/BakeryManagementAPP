@@ -13,8 +13,9 @@ class CustomInputField extends StatelessWidget {
   final IconData icon;
   final TextEditingController controller;
   final bool isEmail;
-  final RegistrationScreenController registrationController =
-      Get.find<RegistrationScreenController>();
+  final String? Function(String?)? validator;
+  // final RegistrationScreenController registrationController =
+  //     Get.find<RegistrationScreenController>();
 
   CustomInputField({
     super.key,
@@ -22,6 +23,7 @@ class CustomInputField extends StatelessWidget {
     required this.icon,
     required this.controller,
     this.isEmail = false,
+    this.validator,
   });
 
   @override
@@ -61,13 +63,14 @@ class CustomInputField extends StatelessWidget {
                 contentPadding: const EdgeInsets.fromLTRB(16, 15, 10, 15),
                 border: InputBorder.none,
               ),
-              validator: (value) {
-                if (isEmail) {
-                  return registrationController.validateEmail(value);
-                } else {
-                  return registrationController.validateUserName(value);
-                }
-              },
+              validator: validator,
+              // validator: (value) {
+              //   if (isEmail) {
+              //     return registrationController.validateEmail(value);
+              //   } else {
+              //     return registrationController.validateUserName(value);
+              //   }
+              // },
             ),
           ),
            Padding(

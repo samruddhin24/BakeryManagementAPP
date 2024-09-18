@@ -42,6 +42,9 @@ class ControllerBinding implements Bindings{
     Get.lazyPut<ProfileController>(()=> ProfileController(),
     tag: ControllerTags.profileController, fenix: true);
 
+    Get.lazyPut<EditProfileController>(()=> EditProfileController(),
+        tag: ControllerTags.editProfileController, fenix: true);
+
     Get.lazyPut<RegistrationScreenController>(()=> RegistrationScreenController(),
     tag: ControllerTags.registrationController, fenix: true);
 

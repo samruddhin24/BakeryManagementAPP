@@ -17,6 +17,7 @@ class AppRoutes{
     GetPage(name: RouteConstants.descriptionScreen, page: ()=> const DescriptionScreen()),
     GetPage(name: RouteConstants.productScreen, page: ()=> const ProductScreen()),
     GetPage(name: RouteConstants.profileScreen, page: ()=> const ProfileScreen()),
+    GetPage(name: RouteConstants.editProfileScreen, page: ()=> EditProfileScreen()),
     GetPage(name: RouteConstants.registerScreen, page: ()=> const RegistrationScreen()),
     GetPage(name: RouteConstants.splashScreen, page: ()=> const SplashScreen()),
   ];

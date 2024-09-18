@@ -67,6 +67,7 @@ class RegistrationScreen extends StatelessWidget {
                               hintText: AppConstants.usernameFieldHint,
                               icon: Icons.person_outline,
                               controller: controller.nameController,
+                              validator: controller.validateUserName,
                             ),
                             const SizedBox(height: 20),
                             CustomInputField(
@@ -74,6 +75,7 @@ class RegistrationScreen extends StatelessWidget {
                               icon: Icons.email_outlined,
                               controller: controller.emailController,
                               isEmail: true,
+                              validator: controller.validateEmail,
                             ),
                             const SizedBox(height: 20),
                             CustomButton(

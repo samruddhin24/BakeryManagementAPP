@@ -10,6 +10,7 @@ class ControllerTags{
   static const productDescriptionController = 'productDescriptionController';
   static const productController = 'productController';
   static const profileController = 'profileController';
+  static const editProfileController = 'editProfileController';
   static const registrationController = 'registrationController';
   static const splashController = 'splashController';
   static const orderInformationController = 'orderInformationController';

@@ -5,23 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 
-class EditProfileImagePicker extends StatefulWidget {
-  final File? selectedImage;
-  final String defaultImage;
-  final Function(File?) onImageSelected;
+class EditProfileImagePicker extends StatelessWidget {
+  const EditProfileImagePicker({super.key});
 
-  const EditProfileImagePicker(
-      {super.key,
-      required this.selectedImage,
-      required this.defaultImage,
-      required this.onImageSelected});
-
-  @override
-  State<EditProfileImagePicker> createState() => _EditProfileImagePickerState();
-}
-
-class _EditProfileImagePickerState extends State<EditProfileImagePicker> {
-  final EditProfileController controller = Get.find<EditProfileController>(tag: ControllerTags.editProfileController);
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -29,63 +15,11 @@ class _EditProfileImagePickerState extends State<EditProfileImagePicker> {
         children: [
           CircleAvatar(
             radius: 60,
-            backgroundImage: widget.selectedImage != null
-                ? FileImage(widget.selectedImage!)
-                : AssetImage(widget.defaultImage) as ImageProvider,
+            backgroundImage: AssetImage(ImageConstants.popular1),
           ),
           Positioned(
             bottom: 0,
             right: 0,
-            child: InkWell(
-              onTap: () {
-                showModalBottomSheet(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return BottomSheet(
-                      onClosing: () {},
-                      builder: (BuildContext context) {
-                        return Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            ListTile(
-                              leading: const Icon(Icons.photo_library_outlined),
-                              title: const Text(
-                                'Pick photo from gallery',
-                              ),
-                              onTap: () async {
-                                File? image = await controller.pickImageFromGallery();
-                                widget.onImageSelected(image);
-                                Get.back();
-                              },
-                            ),
-                            ListTile(
-                              leading: const Icon(Icons.camera_alt_outlined),
-                              title: const Text(
-                                'Capture Photo',
-                              ),
-                              onTap: () async {
-                                File? image = await controller.pickImageFromCamera();
-                                widget.onImageSelected(image);
-                                Get.back();
-                              },
-                            ),
-                            ListTile(
-                              leading: const Icon(Icons.delete_outline),
-                              title: const Text(
-                                'Remove Image',
-                              ),
-                              onTap: () async {
-                                widget.onImageSelected(null);
-                                Get.back();
-                              },
-                            ),
-                          ],
-                        );
-                      },
-                    );
-                  },
-                );
-              },
               child: Container(
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
@@ -98,7 +32,6 @@ class _EditProfileImagePickerState extends State<EditProfileImagePicker> {
                 ),
               ),
             ),
-          ),
         ],
       ),
     );

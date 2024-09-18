@@ -2,11 +2,9 @@ import 'package:bakery_app/constants/controller_tags.dart';
 import 'package:bakery_app/screens/screens.dart';
 import 'package:bakery_app/widgets/custom_button.dart';
 import 'package:bakery_app/widgets/custom_otp_field.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../constants/app_constants.dart';
-import '../../constants/route_constants.dart';
 import 'otp_controller.dart';
 
 class OtpScreen extends StatelessWidget {
@@ -22,7 +20,6 @@ class OtpScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(top: 60, left: 16, right: 16),
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(

@@ -56,15 +56,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 20),
-                  EditProfileImagePicker(
-                      selectedImage: selectedImage,
-                      defaultImage: defaultImage,
-                      onImageSelected: (File? image) {
-                        setState(() {
-                          selectedImage = image;
-                        });
-                      }),
+                  const SizedBox(height: 40),
+                  const EditProfileImagePicker(),
                   const SizedBox(height: 40),
                   CustomInputField(
                     hintText: AppConstants.usernameFieldHint,
@@ -90,9 +83,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   CustomButton(
                       text: AppConstants.update,
                       onPressed: () {
-                        if(formKey.currentState?.validate() ?? false){
-                          controller.updateProfile(formKey);
-                        }
+                        Get.toNamed(RouteConstants.profileScreen);
                       })
                 ],
               ),

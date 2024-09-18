@@ -6,7 +6,6 @@ import 'package:bakery_app/widgets/custom_navbar.dart';
 import 'package:bakery_app/widgets/product_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../constants/app_colors.dart';
 import '../../widgets/search_bar.dart';
 
 class HomeScreen extends StatelessWidget {

@@ -39,7 +39,7 @@ class IntroScreen extends StatelessWidget {
                     return FadeTransition(opacity: animation, child: child);
                   },
                   child: Column(
-                    key: ValueKey<int>(controller.currentPage.value), // Key for triggering animation
+                    key: ValueKey<int>(controller.currentPage.value),
                     children: [
                       ClipOval(
                         child: Image.asset(

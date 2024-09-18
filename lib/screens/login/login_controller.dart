@@ -11,10 +11,8 @@ class LoginController extends GetxController{
 
   void login(){
     if (mobileNumber.value.length == 10) {
-      // Navigate to OTP page
-      Get.toNamed(RouteConstants.otpScreen); // Replace '/otp' with the actual route to your OTP page
+      Get.toNamed(RouteConstants.otpScreen);
     } else {
-      // Show error message
       Get.snackbar('Error', 'Please provide a valid number',colorText: Colors.white,backgroundColor: Colors.red,snackPosition: SnackPosition.BOTTOM);
     }
   }

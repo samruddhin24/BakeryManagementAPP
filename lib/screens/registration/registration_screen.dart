@@ -12,9 +12,6 @@ class RegistrationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final RegistrationScreenController controller =
-    // Get.find<RegistrationScreenController>(tag: ControllerTags.registrationController);
-    // controller.onReady();
     final RegistrationScreenController controller = Get.put(RegistrationScreenController());
     return Scaffold(
       body: Stack(

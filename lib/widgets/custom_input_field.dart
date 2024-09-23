@@ -77,7 +77,7 @@ class CustomInputField extends StatelessWidget {
             padding: const EdgeInsets.only(right: 12),
             child: Icon(
               icon,
-              color: AppColors.grey,
+              color: AppColors.black,
             ),
           ),
         ],

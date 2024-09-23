@@ -23,7 +23,7 @@ class AppConstants{
   static String loginFieldHint = 'Enter mobile number';
   // OTP Page
   static String otpHeading = 'OTP Verification';
-  static String otpSubHeading = 'Enter 4 digit OTP Sent you on your\nmobile number';
+  static String otpSubHeading = 'Enter 6 digit OTP Sent you on your\nmobile number';
   static String verifyBtn = 'Verify';
   static String resendOTP = 'Didnt receive OTP? Resend';
   // Register Page

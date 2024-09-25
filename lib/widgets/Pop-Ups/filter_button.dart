@@ -94,6 +94,7 @@ class FilterButton extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 CustomButton(
+                  backgroundColor: AppColors.red,
                   text: 'Reset',
                   onPressed: () {
                     controller.resetFilter();
